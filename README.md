@@ -33,11 +33,11 @@ Como não é possível armazenar números tão grandes usando tipos de dados con
 ## Compilação
 Para compilar o programa basta utilizar o comando : 
 ~~~C
-gcc nome_do_arquivo.c -o nome_do_arquivo
+make 
 ~~~
 e para execução
 ~~~C
-./nome_do_arquivo
+./main
 ~~~
 
 ## Nota final
