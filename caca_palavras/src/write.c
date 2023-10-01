@@ -1,9 +1,10 @@
 #include <stdio.h>
+#include <string.h>
 #include "../include/word_hunt.h"
 #include "../include/write.h"
 
 // printando palavra encontrada
-void print_word(int palavra_idx, int COORDENAS[N][2], palavra PALAVRAS[M])
+void print_word(int palavra_idx, int COORDENADAS[N][2], palavra PALAVRAS[M])
 {
     // mudando status da palavra para encontrada
     PALAVRAS[palavra_idx].status = 1;
