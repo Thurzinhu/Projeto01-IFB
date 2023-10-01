@@ -12,7 +12,7 @@ OBJ = $(patsubst $(ODIR)/%.c, $(OBJDIR)/%.o, $(SRC))
 all: binfolder objfolder bin/main
 	@ echo "Type 'make run' to run code"
 
-main/bin: $(OBJ)
+bin/main: $(OBJ)
 	$(CC) $(CFLAGS) $^ -o $@
 
 binfolder:

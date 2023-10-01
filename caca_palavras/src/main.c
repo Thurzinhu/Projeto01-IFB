@@ -5,7 +5,7 @@
 int main()
 {
     palavra words;
-    int board[N][N];
+    char board[N][N];
     read(words, board);
 
     find(words, board);
