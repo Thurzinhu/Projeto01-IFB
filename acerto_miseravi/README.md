@@ -37,7 +37,7 @@ make
 ~~~
 e para execução
 ~~~C
-./main
+make run
 ~~~
 
 ## Nota final
