@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 #include "../include/word_hunt.h"
 
 void find(palavra PALAVRAS[M], char MATRIZ[N][N])
@@ -45,7 +46,7 @@ void find(palavra PALAVRAS[M], char MATRIZ[N][N])
     }
 }
 
-void check_square(int palavra_idx, int COORDENADAS[N][2])
+void check_square(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N])
 {
     // definindo linhas e colunas de fim e inicio
     int linha_in = COORDENADAS[0][0] - 1, linha_fin = COORDENADAS[0][0] + 1;
@@ -83,7 +84,7 @@ void check_square(int palavra_idx, int COORDENADAS[N][2])
 // baseando-se nas coordenadas da primeira e da
 // segunda letra checa-se se é possível encontrar a
 // palavra por esse caminho 
-int check_word(int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N])
+int check_word(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N])
 {
     // definindo valores da linha e coluna iniciais assim como
     // da linha e coluna atuais, além da variação das linhas e das
