@@ -16,8 +16,8 @@ typedef struct
 palavra;
 
 // modulo de busca
-void find(palavra PALAVRAS[M], char MATRIZ[N][N]);
-void check_square(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N]);
-int check_word(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N]);
+void find(palavra palavras[M], char tabuleiro[N][N]);
+void check_square(palavra palavras[M], int palavra_idx, int coordenadas[N][2], char tabuleiro[N][N]);
+int check_word(palavra palavras[M], int palavra_idx, int coordenadas[N][2], char tabuleiro[N][N]);
 
 #endif

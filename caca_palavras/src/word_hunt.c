@@ -3,108 +3,92 @@
 #include "../include/word_hunt.h"
 #include "../include/write.h"
 
-void find(palavra PALAVRAS[M], char MATRIZ[N][N])
+void find(palavra palavras[M], char tabuleiro[N][N])
 {
-    for (int i = 0; i < N; i++)
+    // interando sobre cada linha do tabuleiro
+    // saindo do loop se a string começa com o char NUL
+    for (int i = 0; i < N && tabuleiro[i][0] != '\0'; i++)
     {
-        // saindo do loop se a string
-        // começa com o char NUL
-        if (MATRIZ[i][0] == '\0')
+        // interando sobre cada coluna do tabuleiro
+        // saindo do loop quando ultrapassar as barreiras da matriz
+        for (int j = 0; j < N && tabuleiro[i][j] != '\0'; j++)
         {
-            break;
-        }
-
-        for (int j = 0; j < N; j++)
-        {
-            // saindo do loop quando ultrapassar
-            // as barreiras da matriz
-            if (MATRIZ[i][j] == '\0')
+            // interando sobre todas as palavras que devem ser encontradas
+            for (int k = 0; k < M && palavras[k].letras[0] != '\0'; k++)
             {
-                break;
-            }
-
-            for (int k = 0; k < M; k++)
-            {
-                // checando se a letra atual corresponde
-                // a primeira letra de alguma das palavras
-                // e se tal palavra ainda não foi encontrada
-                if ((PALAVRAS[k].letras[0] == MATRIZ[i][j]) && (PALAVRAS[k].status == 0))
+                // checando se a letra atual corresponde a primeira letra 
+                // de alguma das palavras e se tal palavra ainda não foi encontrada
+                if ((palavras[k].letras[0] == tabuleiro[i][j]) && (palavras[k].status == 0))
                 {
-                    int COORDENADAS[N][2] = {0};
-                    COORDENADAS[0][0] = i;
-                    COORDENADAS[0][1] = j;
-                    check_square(PALAVRAS, k, COORDENADAS, MATRIZ);
-                }
+                    int coordenadas[N][2];
 
-                // se a palavra começar por NUL o loop
-                // é quebrado
-                else if (PALAVRAS[k].letras[0] == '\0')
-                {
-                    break;
+                    // salvando coordenadas da primeira letra
+                    coordenadas[0][0] = i;
+                    coordenadas[0][1] = j;
+
+                    // encontrada a primeira letra checa-se as redondezas
+                    check_square(palavras, k, coordenadas, tabuleiro);
                 }
             }
         }
     }
 }
 
-void check_square(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N])
+void check_square(palavra palavras[M], int palavra_idx, int coordenadas[N][2], char tabuleiro[N][N])
 {
-    // definindo linhas e colunas de fim e inicio
-    int linha_in = COORDENADAS[0][0] - 1, linha_fin = COORDENADAS[0][0] + 1;
-    int coluna_in = COORDENADAS[0][1] - 1, coluna_fin = COORDENADAS[0][1] + 1;
+    // definindo linhas e colunas de fim e início e, assim, delimitando
+    // uma área de busca pela segunda letra da palavra
+    int linha_inicial = coordenadas[0][0] - 1, linha_final = coordenadas[0][0] + 1;
+    int coluna_inicial = coordenadas[0][1] - 1, coluna_final = coordenadas[0][1] + 1;
 
-    for (int i = linha_in; i <= linha_fin; i++)
+    for (int i = linha_inicial; i <= linha_final; i++)
     {
-        for (int j = coluna_in; j <= coluna_fin; j++)
+        for (int j = coluna_inicial; j <= coluna_final; j++)
         {
-            // se ultrapassarmos a barreira da matriz
+            // se ultrapassarmos a barreira do tabuleiro do caça palavras
             // o loop vai para o proximo caso
-            if ((i < 0) || (j < 0) || (MATRIZ[i][0] == '\0') || (MATRIZ[i][j] == '\0')
-                || ((i == COORDENADAS[0][0]) && (j == COORDENADAS[0][1])))
+            if ((i < 0) || (j < 0) || (tabuleiro[i][0] == '\0') || (tabuleiro[i][j] == '\0')
+                || ((i == coordenadas[0][0]) && (j == coordenadas[0][1])))
             {
                 continue;
             }
             
             // se encontrarmos a segunda letra dentro do bloco
             // analizamos o caso
-            else if (MATRIZ[i][j] == PALAVRAS[palavra_idx].letras[1])
+            else if (tabuleiro[i][j] == palavras[palavra_idx].letras[1])
             {
-                COORDENADAS[1][0] = i;
-                COORDENADAS[1][1] = j;
+                coordenadas[1][0] = i;
+                coordenadas[1][1] = j;
                 
                 // checando se a palavra foi encontrada
-                if (check_word(PALAVRAS, palavra_idx, COORDENADAS, MATRIZ))
+                if (check_word(palavras, palavra_idx, coordenadas, tabuleiro))
                 {
-                    print_word(palavra_idx, COORDENADAS, PALAVRAS);
+                    print_word(palavra_idx, coordenadas, palavras);
                 }
             }
         }
     }
 }
 
-// baseando-se nas coordenadas da primeira e da
-// segunda letra checa-se se é possível encontrar a
-// palavra por esse caminho 
-int check_word(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char MATRIZ[N][N])
+// baseando-se nas coordenadas da primeira e da segunda letra 
+// checa-se se é possível encontrar a palavra por esse caminho 
+int check_word(palavra palavras[M], int palavra_idx, int coordenadas[N][2], char tabuleiro[N][N])
 {
-    // definindo valores da linha e coluna iniciais assim como
-    // da linha e coluna atuais, além da variação das linhas e das
-    // colunas
-    int linha_in = COORDENADAS[0][0], linha_at = COORDENADAS[1][0],
-        coluna_in = COORDENADAS[0][1], coluna_at = COORDENADAS[1][1],
-        variacao_linha = linha_at - linha_in, variacao_coluna = coluna_at - coluna_in;
+    // definindo valores da linha e coluna iniciais assim como da linha e coluna atuais, 
+    // além da variação das linhas e das colunas
+    int linha_inicial = coordenadas[0][0], linha_atual = coordenadas[1][0],
+        coluna_inicial = coordenadas[0][1], coluna_atual = coordenadas[1][1],
+        variacao_linha = linha_atual - linha_inicial, variacao_coluna = coluna_atual - coluna_inicial;
 
-    int length = strlen(PALAVRAS[palavra_idx].letras);
-    for (int i = 2; i < length; i++)
+    for (int i = 2, length = strlen(palavras[palavra_idx].letras); i < length; i++)
     {
-        // valores da linha e coluna atuais se atualizam
-        // conforme a variação das linhas e colunas
-        linha_at += variacao_linha;
-        coluna_at += variacao_coluna;
+        // valores da linha e coluna atuais se atualizam conforme a variação das linhas e colunas
+        linha_atual += variacao_linha;
+        coluna_atual += variacao_coluna;
         
         // se a posição atual na matriz não condiz com a letra
-        // de posição 'i' da palavra retorna-se falso  
-        if (MATRIZ[linha_at][coluna_at] != PALAVRAS[palavra_idx].letras[i])
+        // i-ésima letra da palavra retorna-se falso  
+        if (tabuleiro[linha_atual][coluna_atual] != palavras[palavra_idx].letras[i])
         {
             return 0;
         }
@@ -112,8 +96,8 @@ int check_word(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], char
         // guardando as coordenadas de cada letra da palavra
         else
         {
-            COORDENADAS[i][0] = linha_at;
-            COORDENADAS[i][1] = coluna_at;
+            coordenadas[i][0] = linha_atual;
+            coordenadas[i][1] = coluna_atual;
         }
 
     }

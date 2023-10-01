@@ -6,7 +6,10 @@ int main()
 {
     palavra words[M];
     char board[N][N];
+    
+    // lendo input
     read(words, board);
 
+    // iniciando busca
     find(words, board);
 }

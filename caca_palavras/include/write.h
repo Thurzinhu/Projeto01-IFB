@@ -4,6 +4,6 @@
 #include "../include/word_hunt.h"
 
 // modulo de saida
-void print_word(int palavra_idx, int COORDENADAS[N][2], palavra PALAVRAS[M]);
+void print_word(int palavra_idx, int coordenadas[N][2], palavra palavras[M]);
 
 #endif

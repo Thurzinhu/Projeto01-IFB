@@ -2,26 +2,23 @@
 #include "../include/word_hunt.h"
 #include "../include/read.h"
 
-void read(palavra PALAVRAS[M], char MATRIZ[N][N])
+void read(palavra palavras[M], char tabuleiro[N][N])
 {
     int n, m;
 
-    // lendo dimensão da matriz
-    // e quantidade de palavras
+    // lendo dimensão do tabuleiro e quantidade de palavras
     scanf("%i", &n);
     scanf("%i", &m);
 
-    // guardando palavras a serem
-    // encontras na variavel global
+    // guardando palavras a serem encontras
     for (int i = 0; i < m; i++)
     {
-        scanf("%s", PALAVRAS[i].letras);
+        scanf("%s", palavras[i].letras);
     }
 
-    // lendo matriz e guardando na
-    // variavel global
+    // lendo linhas do tabuleiro
     for (int i = 0; i < n; i++)
     {
-        scanf("%s", MATRIZ[i]);
+        scanf("%s", tabuleiro[i]);
     }
 }
