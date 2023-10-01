@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "../include/word_hunt.h"
 
-void find(palavra PALAVRAS, char MATRIZ[N][N])
+void find(palavra PALAVRAS[M], char MATRIZ[N][N])
 {
     for (int i = 0; i < N; i++)
     {

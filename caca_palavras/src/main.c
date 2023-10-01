@@ -4,7 +4,7 @@
 
 int main()
 {
-    palavra words;
+    palavra words[M];
     char board[N][N];
     read(words, board);
 

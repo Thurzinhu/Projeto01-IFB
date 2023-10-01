@@ -2,7 +2,7 @@
 #include "../include/word_hunt.h"
 #include "../include/read.h"
 
-void read(palavra PALAVRAS, char MATRIZ[N][N])
+void read(palavra PALAVRAS[M], char MATRIZ[N][N])
 {
     int n, m;
 

@@ -3,7 +3,7 @@
 #include "../include/write.h"
 
 // printando palavra encontrada
-void print_word(int palavra_idx, int COORDENAS[N][2], palavra PALAVRAS)
+void print_word(int palavra_idx, int COORDENAS[N][2], palavra PALAVRAS[M])
 {
     // mudando status da palavra para encontrada
     PALAVRAS[palavra_idx].status = 1;
