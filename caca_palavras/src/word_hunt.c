@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include "../include/word_hunt.h"
+#include "../include/write.h"
 
 void find(palavra PALAVRAS[M], char MATRIZ[N][N])
 {
@@ -32,7 +33,7 @@ void find(palavra PALAVRAS[M], char MATRIZ[N][N])
                     int COORDENADAS[N][2] = {0};
                     COORDENADAS[0][0] = i;
                     COORDENADAS[0][1] = j;
-                    check_square(k, COORDENADAS);
+                    check_square(PALAVRAS, k, COORDENADAS, MATRIZ);
                 }
 
                 // se a palavra começar por NUL o loop
@@ -72,9 +73,9 @@ void check_square(palavra PALAVRAS[M], int palavra_idx, int COORDENADAS[N][2], c
                 COORDENADAS[1][1] = j;
                 
                 // checando se a palavra foi encontrada
-                if (check_word(palavra_idx))
+                if (check_word(PALAVRAS, palavra_idx, COORDENADAS, MATRIZ))
                 {
-                    print_word(palavra_idx);
+                    print_word(palavra_idx, COORDENADAS, PALAVRAS);
                 }
             }
         }
