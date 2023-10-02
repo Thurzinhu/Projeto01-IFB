@@ -17,11 +17,11 @@ bin/main: $(OBJ)
 
 binfolder:
 	@ echo "Creating bin directory..."
-	mkdir $(BINDIR)
+	mkdir -p $(BINDIR)
 
 objfolder:
 	@ echo "Creating obj directory..."
-	mkdir $(OBJDIR)
+	mkdir -p $(OBJDIR)
 
 $(OBJDIR)/main.o: $(ODIR)/main.c 
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -32,7 +32,7 @@ $(OBJDIR)/%.o: $(ODIR)/%.c $(IDIR)/%.h
 .PHONY: clean run
 
 clean:
-	del $(BINDIR)\* $(OBJDIR)\*
+	rm -f $(BINDIR)/* $(OBJDIR)/*
 	rmdir $(BINDIR) $(OBJDIR)
 
 run:
