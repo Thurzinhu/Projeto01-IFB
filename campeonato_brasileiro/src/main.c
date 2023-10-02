@@ -8,18 +8,18 @@
 
 int main(int argc, char *argv[])
 {
-    time *times = malloc(sizeof(time) * MAX_TEAMS);
+    time *times;
     FILE *infile = NULL;
     int num_times = 0, rodadas = 0;
 
     // checando se o input é válido
-    if (validate(argc, argv, &infile))
+    if (validate(argc, argv, &infile, &times))
     {
         read_file(times, infile, &num_times, &rodadas);
     }
     else
     {
-        return 1;
+        return 2;
     }
 
     // ranquiando times
@@ -28,6 +28,6 @@ int main(int argc, char *argv[])
     // imprimindo resultados no arquivo de saída
     output_file(argv, times, rodadas, num_times);
 
-    // liberando times
+    // liberando memória alocada
     free(times);
 }

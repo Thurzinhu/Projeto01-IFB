@@ -7,6 +7,7 @@ void read_file(time times[], FILE *inptr, int *num_times, int *rodadas)
 {
     // guardando número de times
     fscanf(inptr, "%i", num_times);
+    initialize_teams(times, *num_times);
 
     // calculando número de rodadas  
     *rodadas = (*num_times - 1) * 2;
@@ -54,4 +55,17 @@ void read_file(time times[], FILE *inptr, int *num_times, int *rodadas)
 
     // fechando arquivo de entrada
     fclose(inptr);
+}
+
+// inizializando todos os campos de cada time 
+void initialize_teams(time times[], int num_times)
+{
+    for (int i = 0; i < num_times; i++)
+    {
+        times[i].pontos = 0;
+        times[i].vitorias = 0;
+        times[i].saldo_gols = 0;
+        times[i].gols_a_favor = 0;
+        times[i].gols_contra = 0;
+    }
 }

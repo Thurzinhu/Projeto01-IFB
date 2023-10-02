@@ -3,6 +3,6 @@
 
 #include "../include/read.h"
 
-int validate(int argc, char *argv[], FILE **inptr);
+int validate(int argc, char *argv[], FILE **inptr, time **times);
 
 #endif

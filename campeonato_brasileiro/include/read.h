@@ -19,5 +19,6 @@ typedef struct
 time;
 
 void read_file(time times[], FILE *inptr, int *num_times, int *rodadas);
+void initialize_teams(time times[], int num_times);
 
 #endif
