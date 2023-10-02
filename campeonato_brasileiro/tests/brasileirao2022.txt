@@ -1,0 +1,440 @@
+20
+Fluminense
+Santos
+Atlético-GO
+Flamengo
+Palmeiras
+Ceará
+Coritiba
+Goiás
+Atlético-MG
+Internacional
+Botafogo
+Corinthians
+Fortaleza
+Cuiabá
+Avaí
+América
+SãoPaulo
+Athletico
+Juventude
+Bragantino
+---
+Fluminense 0 x 0 Santos
+Atlético-GO 1 x 1 Flamengo
+Palmeiras 2 x 3 Ceará
+Coritiba 3 x 0 Goiás
+Atlético-MG 2 x 0 Internacional
+Botafogo 1 x 3 Corinthians
+Fortaleza 0 x 1 Cuiabá
+Avaí 1 x 0 América
+SãoPaulo 4 x 0 Athletico
+Juventude 2 x 2 Bragantino
+---
+Goiás 1 x 1 Palmeiras
+América 4 x 1 Juventude
+Corinthians 3 x 0 Avaí
+Cuiabá 0 x 1 Fluminense
+Santos 2 x 1 Coritiba
+Flamengo 3 x 1 SãoPaulo
+Bragantino 4 x 0 Atlético-GO
+Athletico 0 x 1 Atlético-MG
+Internacional 2 x 1 Fortaleza
+Ceará 1 x 3 Botafogo
+---
+Bragantino 1 x 1 SãoPaulo
+Athletico 1 x 0 Flamengo
+Fluminense 0 x 1 Internacional
+Palmeiras 3 x 0 Corinthians
+Atlético-MG 2 x 2 Coritiba
+Santos 3 x 0 América
+Juventude 0 x 1 Cuiabá
+Atlético-GO 1 x 1 Botafogo
+Avaí 3 x 2 Goiás
+Flamengo 0 x 0 Palmeiras
+---
+América 1 x 0 Athletico
+Ceará 0 x 1 Bragantino
+Goiás 2 x 2 Atlético-MG
+Cuiabá 1 x 1 Atlético-GO
+Botafogo 1 x 1 Juventude
+Corinthians 1 x 0 Fortaleza
+Coritiba 3 x 2 Fluminense
+Internacional 0 x 0 Avaí
+SãoPaulo 2 x 1 Santos
+Atlético-MG 1 x 2 América
+---
+Athletico 1 x 0 Ceará
+Flamengo 0 x 1 Botafogo
+Palmeiras 1 x 1 Fluminense
+Atlético-GO 0 x 1 Goiás
+Bragantino 0 x 1 Corinthians
+Santos 4 x 1 Cuiabá
+Juventude 1 x 1 Internacional
+Fortaleza 1 x 1 SãoPaulo
+Avaí 2 x 1 Coritiba
+Fortaleza 0 x 1 Ceará
+---
+Palmeiras 2 x 0 Bragantino
+Ceará 2 x 2 Flamengo
+Atlético-MG 2 x 0 Atlético-GO
+Internacional 2 x 2 Corinthians
+Fluminense 2 x 1 Athletico
+SãoPaulo 2 x 1 Cuiabá
+Coritiba 1 x 0 América
+Avaí 1 x 2 Juventude
+Botafogo 3 x 1 Fortaleza
+Goiás 1 x 0 Santos
+---
+Bragantino 1 x 1 Atlético-MG
+Flamengo 1 x 0 Goiás
+Atlético-GO 2 x 0 Coritiba
+Santos 0 x 0 Ceará
+Juventude 0 x 3 Palmeiras
+América 1 x 1 Botafogo
+Cuiabá 1 x 1 Internacional
+Corinthians 1 x 1 SãoPaulo
+Fortaleza 0 x 1 Fluminense
+Athletico 2 x 1 Avaí
+---
+Goiás 1 x 1 Bragantino
+SãoPaulo 2 x 2 Ceará
+Fortaleza 1 x 1 Juventude
+Santos 0 x 1 Palmeiras
+Coritiba 1 x 0 Botafogo
+Fluminense 1 x 2 Flamengo
+Corinthians 1 x 1 América
+Cuiabá 0 x 1 Athletico
+Atlético-MG 2 x 1 Avaí
+Internacional 1 x 1 Atlético-GO
+---
+América 2 x 1 Cuiabá
+Ceará 1 x 1 Coritiba
+Avaí 1 x 1 SãoPaulo
+Athletico 2 x 2 Santos
+Atlético-GO 0 x 1 Corinthians
+Juventude 1 x 0 Fluminense
+Flamengo 1 x 2 Fortaleza
+Palmeiras 0 x 0 Atlético-MG
+Bragantino 0 x 2 Internacional
+Botafogo 1 x 2 Goiás
+---
+Cuiabá 1 x 0 Corinthians
+América 0 x 2 Ceará
+Juventude 1 x 3 Athletico
+Bragantino 1 x 0 Flamengo
+Atlético-GO 2 x 1 Avaí
+Fluminense 5 x 3 Atlético-MG
+Santos 1 x 1 Internacional
+Palmeiras 4 x 0 Botafogo
+Coritiba 1 x 1 SãoPaulo
+Fortaleza 1 x 1 Goiás
+---
+Corinthians 2 x 0 Juventude
+Atlético-MG 1 x 1 Santos
+Fluminense 0 x 2 Atlético-GO
+Cuiabá 1 x 1 Bragantino
+Internacional 3 x 1 Flamengo
+SãoPaulo 1 x 0 América
+Goiás 1 x 1 Ceará
+Coritiba 0 x 2 Palmeiras
+Fortaleza 0 x 0 Athletico
+Botafogo 0 x 1 Avaí
+---
+Juventude 1 x 2 Santos
+Bragantino 4 x 2 Coritiba
+Ceará 0 x 0 Atlético-MG
+Flamengo 2 x 0 Cuiabá
+Goiás 1 x 2 Internacional
+América 0 x 0 Fluminense
+Athletico 1 x 1 Corinthians
+Botafogo 1 x 0 SãoPaulo
+Palmeiras 4 x 2 Atlético-GO
+Avaí 3 x 2 Fortaleza
+---
+Cuiabá 0 x 0 Ceará
+Santos 2 x 2 Bragantino
+Atlético-MG 2 x 0 Flamengo
+Corinthians 1 x 0 Goiás
+Coritiba 0 x 1 Athletico
+Internacional 2 x 3 Botafogo
+Atlético-GO 3 x 1 Juventude
+Fortaleza 1 x 0 América
+Fluminense 2 x 0 Avaí
+SãoPaulo 1 x 2 Palmeiras
+---
+Internacional 3 x 0 Coritiba
+Athletico 4 x 2 Bragantino
+Corinthians 0 x 0 Santos
+Flamengo 3 x 0 América
+Atlético-MG 3 x 2 Fortaleza
+Botafogo 0 x 1 Fluminense
+Avaí 2 x 2 Palmeiras
+Ceará 1 x 1 Atlético-GO
+Goiás 1 x 0 Cuiabá
+SãoPaulo 0 x 0 Juventude
+---
+Fluminense 4 x 0 Corinthians
+Juventude 1 x 2 Atlético-MG
+Santos 1 x 2 Flamengo
+Ceará 1 x 1 Internacional
+Palmeiras 0 x 2 Athletico
+Avaí 1 x 2 Cuiabá
+Atlético-GO 1 x 2 SãoPaulo
+América 1 x 0 Goiás
+Coritiba 2 x 1 Fortaleza
+Bragantino 0 x 1 Botafogo
+---
+Bragantino 4 x 0 Avaí
+Fluminense 2 x 1 Ceará
+Goiás 2 x 1 Athletico
+Coritiba 2 x 2 Juventude
+Corinthians 1 x 0 Flamengo
+Atlético-MG 0 x 0 SãoPaulo
+Santos 1 x 0 Atlético-GO
+Fortaleza 0 x 0 Palmeiras
+Cuiabá 2 x 0 Botafogo
+Internacional 1 x 0 América
+---
+Athletico 0 x 0 Internacional
+Flamengo 2 x 0 Coritiba
+Avaí 1 x 0 Santos
+Ceará 3 x 1 Corinthians
+Juventude 0 x 0 Goiás
+SãoPaulo 2 x 2 Fluminense
+Botafogo 0 x 1 Atlético-MG
+Atlético-GO 0 x 1 Fortaleza
+América 0 x 3 Bragantino
+Palmeiras 1 x 0 Cuiabá
+---
+Ceará 1 x 0 Avaí
+Bragantino 2 x 1 Fortaleza
+Goiás 2 x 3 Fluminense
+Athletico 4 x 1 Atlético-GO
+Flamengo 4 x 0 Juventude
+Internacional 3 x 3 SãoPaulo
+Corinthians 3 x 1 Coritiba
+Santos 2 x 0 Botafogo
+Cuiabá 1 x 1 Atlético-MG
+América 0 x 1 Palmeiras
+---
+SãoPaulo 3 x 3 Goiás
+Botafogo 2 x 0 Athletico
+Avaí 1 x 2 Flamengo
+Fluminense 2 x 1 Bragantino
+Palmeiras 2 x 1 Internacional
+Juventude 1 x 0 Ceará
+Atlético-MG 1 x 2 Corinthians
+Atlético-GO 0 x 1 América
+Fortaleza 0 x 0 Santos
+Coritiba 1 x 0 Cuiabá
+---
+Ceará 1 x 2 Palmeiras
+Goiás 1 x 0 Coritiba
+Corinthians 1 x 0 Botafogo
+Flamengo 4 x 1 Atlético-GO
+Internacional 3 x 0 Atlético-MG
+Athletico 1 x 0 SãoPaulo
+América 3 x 1 Avaí
+Cuiabá 0 x 1 Fortaleza
+Bragantino 1 x 0 Juventude
+Santos 2 x 2 Fluminense
+---
+Juventude 0 x 1 América
+Botafogo 1 x 1 Ceará
+Atlético-GO 2 x 1 Bragantino
+Avaí 1 x 1 Corinthians
+SãoPaulo 0 x 2 Flamengo
+Palmeiras 3 x 0 Goiás
+Fluminense 1 x 0 Cuiabá
+Fortaleza 3 x 0 Internacional
+Atlético-MG 2 x 3 Athletico
+Coritiba 1 x 2 Santos
+---
+Goiás 1 x 1 Avaí
+Corinthians 0 x 1 Palmeiras
+Cuiabá 1 x 0 Juventude
+Botafogo 0 x 0 Atlético-GO
+Coritiba 0 x 1 Atlético-MG
+Flamengo 5 x 0 Athletico
+SãoPaulo 3 x 0 Bragantino
+Ceará 0 x 1 Fortaleza
+América 1 x 0 Santos
+Internacional 3 x 0 Fluminense
+---
+Atlético-MG 0 x 1 Goiás
+Fluminense 5 x 2 Coritiba
+Juventude 2 x 2 Botafogo
+Palmeiras 1 x 1 Flamengo
+Bragantino 1 x 1 Ceará
+Athletico 1 x 1 América
+Atlético-GO 1 x 1 Cuiabá
+Fortaleza 1 x 0 Corinthians
+Santos 1 x 0 SãoPaulo
+Avaí 0 x 1 Internacional
+---
+Goiás 2 x 1 Atlético-GO
+Coritiba 1 x 0 Avaí
+Fluminense 1 x 1 Palmeiras
+Ceará 0 x 0 Athletico
+América 1 x 1 Atlético-MG
+SãoPaulo 0 x 1 Fortaleza
+Botafogo 0 x 1 Flamengo
+Cuiabá 0 x 0 Santos
+Internacional 4 x 0 Juventude
+Corinthians 1 x 0 Bragantino
+---
+Juventude 1 x 1 Avaí
+Athletico 1 x 0 Fluminense
+Bragantino 2 x 2 Palmeiras
+América 2 x 0 Coritiba
+Flamengo 1 x 1 Ceará
+Corinthians 2 x 2 Internacional
+Fortaleza 1 x 3 Botafogo
+Atlético-GO 0 x 2 Atlético-MG
+Cuiabá 1 x 1 SãoPaulo
+Santos 1 x 2 Goiás
+---
+Atlético-MG 1 x 1 Bragantino
+Ceará 2 x 1 Santos
+Internacional 1 x 0 Cuiabá
+Fluminense 2 x 1 Fortaleza
+Palmeiras 2 x 1 Juventude
+Botafogo 0 x 0 América
+Avaí 1 x 1 Athletico
+SãoPaulo 1 x 1 Corinthians
+Coritiba 2 x 0 Atlético-GO
+Goiás 1 x 1 Flamengo
+---
+Avaí 1 x 0 Atlético-MG
+Botafogo 2 x 0 Coritiba
+Bragantino 1 x 1 Goiás
+Ceará 0 x 2 SãoPaulo
+América 1 x 0 Corinthians
+Flamengo 1 x 2 Fluminense
+Juventude 1 x 1 Fortaleza
+Palmeiras 1 x 0 Santos
+Athletico 2 x 2 Cuiabá
+Atlético-GO 1 x 2 Internacional
+---
+SãoPaulo 4 x 0 Avaí
+Santos 2 x 0 Athletico
+Fluminense 4 x 0 Juventude
+Corinthians 2 x 1 Atlético-GO
+Fortaleza 3 x 2 Flamengo
+Coritiba 1 x 0 Ceará
+Cuiabá 2 x 1 América
+Atlético-MG 0 x 1 Palmeiras
+Internacional 0 x 0 Bragantino
+Goiás 0 x 1 Botafogo
+---
+Internacional 1 x 0 Santos
+Atlético-MG 2 x 0 Fluminense
+Ceará 1 x 2 América
+Flamengo 4 x 1 Bragantino
+Goiás 0 x 1 Fortaleza
+Avaí 1 x 2 Atlético-GO
+Athletico 2 x 0 Juventude
+Corinthians 2 x 0 Cuiabá
+Botafogo 1 x 3 Palmeiras
+SãoPaulo 3 x 1 Coritiba
+---
+Juventude 2 x 2 Corinthians
+Bragantino 2 x 1 Cuiabá
+Ceará 1 x 1 Goiás
+Atlético-GO 3 x 2 Fluminense
+Athletico 1 x 1 Fortaleza
+Flamengo 0 x 0 Internacional
+Santos 1 x 2 Atlético-MG
+Palmeiras 4 x 0 Coritiba
+Avaí 1 x 2 Botafogo
+América 1 x 2 SãoPaulo
+---
+Cuiabá 1 x 2 Flamengo
+Corinthians 2 x 1 Athletico
+Internacional 4 x 2 Goiás
+SãoPaulo 0 x 1 Botafogo
+Fortaleza 2 x 0 Avaí
+Fluminense 0 x 2 América
+Atlético-MG 0 x 0 Ceará
+Coritiba 2 x 1 Bragantino
+Atlético-GO 1 x 1 Palmeiras
+Santos 4 x 1 Juventude
+---
+Palmeiras 0 x 0 SãoPaulo
+América 1 x 2 Fortaleza
+Flamengo 1 x 0 Atlético-MG
+Ceará 1 x 1 Cuiabá
+Botafogo 0 x 1 Internacional
+Juventude 1 x 1 Atlético-GO
+Athletico 1 x 0 Coritiba
+Avaí 0 x 3 Fluminense
+Bragantino 0 x 2 Santos
+Goiás 0 x 0 Corinthians
+---
+Bragantino 4 x 2 Athletico
+América 1 x 2 Flamengo
+Santos 0 x 1 Corinthians
+Palmeiras 3 x 0 Avaí
+Fluminense 2 x 2 Botafogo
+Juventude 1 x 2 SãoPaulo
+Atlético-GO 1 x 0 Ceará
+Cuiabá 1 x 2 Goiás
+Coritiba 1 x 1 Internacional
+Fortaleza 0 x 0 Atlético-MG
+---
+Flamengo 3 x 1 Santos
+Athletico 1 x 3 Palmeiras
+Botafogo 2 x 1 Bragantino
+Corinthians 0 x 2 Fluminense
+Internacional 2 x 1 Ceará
+Goiás 2 x 2 América
+SãoPaulo 2 x 1 Atlético-GO
+Fortaleza 3 x 1 Coritiba
+Cuiabá 1 x 0 Avaí
+Atlético-MG 1 x 0 Juventude
+---
+Ceará 0 x 1 Fluminense
+Botafogo 0 x 2 Cuiabá
+SãoPaulo 2 x 2 Atlético-MG
+América 1 x 0 Internacional
+Athletico 3 x 2 Goiás
+Juventude 0 x 1 Coritiba
+Atlético-GO 2 x 3 Santos
+Avaí 1 x 2 Bragantino
+Palmeiras 4 x 0 Fortaleza
+Flamengo 1 x 2 Corinthians
+---
+Fluminense 3 x 1 SãoPaulo
+Santos 1 x 1 Avaí
+Bragantino 1 x 4 América
+Goiás 1 x 0 Juventude
+Corinthians 1 x 0 Ceará
+Internacional 2 x 0 Athletico
+Coritiba 1 x 0 Flamengo
+Fortaleza 1 x 1 Atlético-GO
+Cuiabá 1 x 1 Palmeiras
+Atlético-MG 0 x 2 Botafogo
+---
+SãoPaulo 0 x 1 Internacional
+Fluminense 3 x 0 Goiás
+Avaí 2 x 0 Ceará
+Coritiba 2 x 2 Corinthians
+Fortaleza 6 x 0 Bragantino
+Atlético-GO 1 x 1 Athletico
+Palmeiras 2 x 1 América
+Juventude 2 x 2 Flamengo
+Atlético-MG 3 x 0 Cuiabá
+Botafogo 3 x 0 Santos
+---
+Flamengo 1 x 2 Avaí
+América 1 x 1 Atlético-GO
+Bragantino 0 x 1 Fluminense
+Corinthians 0 x 1 Atlético-MG
+Santos 0 x 2 Fortaleza
+Internacional 3 x 0 Palmeiras
+Ceará 4 x 1 Juventude
+Goiás 0 x 4 SãoPaulo
+Cuiabá 2 x 1 Coritiba
+Athletico 3 x 0 Botafogo
+---

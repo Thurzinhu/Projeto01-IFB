@@ -1,0 +1,24 @@
+4
+juventude
+cuiaba
+flamengo
+internacional
+---
+juventude 2 x 3 internacional
+cuiaba 5 x 5 flamengo
+---
+juventude 0 x 5 flamengo
+internacional 0 x 1 cuiaba
+---
+juventude 4 x 0 cuiaba
+flamengo 5 x 0 internacional
+---
+internacional 1 x 0 juventude
+flamengo 4 x 5 cuiaba
+---
+flamengo 5 x 4 juventude
+cuiaba 2 x 1 internacional
+---
+cuiaba 3 x 5 juventude
+internacional 1 x 5 flamengo
+---
