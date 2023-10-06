@@ -5,6 +5,8 @@ IDIR = ../campeonato_brasileiro/include
 ODIR = ../campeonato_brasileiro/src
 OBJDIR = objects
 BINDIR = bin
+TESTDIR = tests
+INFILE = brasileirao2022.txt
 
 SRC = $(wildcard $(ODIR)/*.c)
 OBJ = $(patsubst $(ODIR)/%.c, $(OBJDIR)/%.o, $(SRC))
@@ -36,4 +38,4 @@ clean:
 	rmdir $(BINDIR) $(OBJDIR)
 
 run:
-	$(BINDIR)/main
+	$(BINDIR)/main $(TESTDIR)/$(INFILE) tabela.txt
