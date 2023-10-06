@@ -26,7 +26,7 @@ A primeira linha de entrada contém um inteiro `N` que representa a quantidade d
 |`EXIT`                    | Encerra o programa             |
 
 ## Restrições
-A `N` de instruções é menor ou igual a cem e é garantido que o programa é sintaticamente correto. `1 <= N <= 100`
+O número `N` de instruções é menor ou igual a cem e é garantido que o programa é sintaticamente correto. `1 <= N <= 100`
 
 ## Exemplo
 
