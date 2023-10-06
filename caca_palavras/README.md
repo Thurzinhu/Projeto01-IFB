@@ -1,8 +1,8 @@
-# Caça palavras
+# Caça-palavras
 
-Este projeto foi desenvolvido com o intuito de servir como objeto de avaliação para o professor da disciplina de Programação de Computadores 1.
+Este projeto foi desenvolvido com o intuito de consolidar habilidades de programação com matrizes.
 
-A ideia principal do projeto é implementar um caça palavras.
+A ideia principal do projeto é implementar um caça-palavras.
 
 ## Especificação de Entrada
 
