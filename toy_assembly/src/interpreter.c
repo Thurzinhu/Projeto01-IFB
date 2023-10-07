@@ -29,7 +29,7 @@ const char *function_names[] = {
     "MUL",  "MOD", "BEQ", "BLT",   "LOAD", "STORE",
 };
 
-int register_count;
+int register_count, sign;
 
 // criando array de registrados e de memória e inizializando todos eles
 int registers[NUM_REGISTERS] = {0}, memory[NUM_MEMORY] = {0};
@@ -48,6 +48,9 @@ void interpret(char instructions[][MAX_CHAR], int rows)
 
         // reiniciando contagem de registradores
         register_count = 0;
+
+        // definindo sinal do inteiro
+        sign = 1;
 
         // executando função principal e indo para próxima instrução
         int run = definePath(main_instruction, instructions[instruction_address], pos, &instruction_address);
@@ -71,11 +74,13 @@ int definePath(char instruction[], char cur_instruction[], int pos, int *instruc
         return 0;
     }
 
+    // array de registrados
     int registers_indexes[] = {0, 0, 0};
     
     // pegando os indíces de cada registrador
     getRegistersIndex(cur_instruction, pos, registers_indexes);
 
+    // avaliando função a ser executada
     int function_idx;
     for (function_idx = 0; function_idx < NUM_FUNCTIONS; function_idx++)
     {
@@ -95,7 +100,7 @@ int definePath(char instruction[], char cur_instruction[], int pos, int *instruc
         case MOV:
             (register_count == 2)
             ? mov(registers, registers_indexes[0], registers_indexes[1])
-            : movInt(registers, registers_indexes[0], registers_indexes[1]);
+            : movInt(registers, registers_indexes[0], registers_indexes[1] * sign);
             break;
 
         case PRINT:
@@ -173,7 +178,7 @@ void getRegistersIndex(char instruction[], int pos, int idx[])
     }
 }
 
-// pulando caractéres irrelevantes e contando número de registradores
+// pulando carácteres irrelevantes e contando número de registradores
 void skipCharactes(char instruction[], int *pos)
 {
     while (!isdigit(instruction[*pos]))
@@ -181,6 +186,10 @@ void skipCharactes(char instruction[], int *pos)
         if (instruction[*pos] == REGISTER)
         {
             register_count++;
+        }
+        else if (instruction[*pos] == '-')
+        {
+            sign = -1;
         }
         (*pos)++;
     }
@@ -203,7 +212,7 @@ int stoi(char instruction[], int *pos)
 // obtendo a instrução principal
 void getMainInstruction(char main_instruction[], char cur_instruction[], int *pos)
 {
-    // começando do primeiro caractér da string até encontrar um espaço
+    // começando do primeiro carácter da string até encontrar um espaço
     // ou chegar em seu fim  
     while (cur_instruction[*pos] != ' ' && cur_instruction[*pos] != '\0')
     {
