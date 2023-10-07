@@ -43,7 +43,7 @@ internacional 1 x 5 flamengo
 
 ### Output
 ~~~
-P		Clube		  PT PJ VIT SG GM GC
+P		Clube		          PT PJ VIT SG GM GC
 01 flamengo           13 06 04 014 29 15
 02 cuiaba             10 06 03 -03 16 19
 03 juventude          06 06 02 -02 15 17
