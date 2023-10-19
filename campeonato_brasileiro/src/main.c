@@ -13,14 +13,13 @@ int main(int argc, char *argv[])
     int num_times = 0, rodadas = 0;
 
     // checando se o input é válido
-    if (validate(argc, argv, &infile, &times))
-    {
-        read_file(times, infile, &num_times, &rodadas);
-    }
-    else
+    if (!validate(argc, argv, &infile, &times))
     {
         return 2;
     }
+
+    // lendo resultados
+    read_file(times, infile, &num_times, &rodadas);
 
     // ranquiando times
     rank(times, num_times);
