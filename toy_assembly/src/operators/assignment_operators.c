@@ -1,12 +1,17 @@
 #include <stdio.h>
 #include "../include/operators/assignment_operators.h"
 
-void mov(int registers[], int rx, int ry)
+void mov(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
-    registers[rx] = registers[ry];
-}
+    // movendo conteúdo do registrador ry para rx
+    if (register_count == 2)
+    {
+        registers[rx] = registers[ry];
+    }
 
-void movInt(int registers[], int rx, int n)
-{
-    registers[rx] = n;
+    // movendo valor inteiro para registrador rx
+    else
+    {
+        registers[rx] = integer;
+    }
 }

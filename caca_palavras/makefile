@@ -1,10 +1,10 @@
 CC = gcc
-CFLAGS = -Wall
+CFLAGS = -Wall -g
 
 OBJDIR = objects
 BINDIR = bin
-IDIR = ../caca_palavras/include
-ODIR = ../caca_palavras/src
+IDIR = ./include
+ODIR = ./src
 
 SRC = $(wildcard $(ODIR)/*.c)
 OBJ = $(patsubst $(ODIR)/%.c, $(OBJDIR)/%.o, $(SRC))

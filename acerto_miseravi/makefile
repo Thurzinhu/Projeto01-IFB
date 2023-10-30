@@ -1,8 +1,8 @@
 CFLAGS = -Wall
 CC = gcc
 
-IDIR = ../acerto_miseravi/include
-ODIR = ../acerto_miseravi/src
+IDIR = ./include
+ODIR = ./src
 BINDIR = bin
 OBJDIR = objects
 

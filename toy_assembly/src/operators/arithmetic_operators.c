@@ -2,28 +2,28 @@
 #include "../include/operators/arithmetic_operators.h"
 
 // implementação das funções aritméticas
-void add(int registers[], int rx, int ry, int rz)
+void add(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
     registers[rx] = registers[ry] + registers[rz];
 }
 
-void sub(int registers[], int rx, int ry, int rz)
+void sub(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
     registers[rx] = registers[ry] - registers[rz];
 }
 
-void div(int registers[], int rx, int ry, int rz)
+void my_div(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
     registers[rx] = registers[ry] / registers[rz];
 }
 
-void mul(int registers[], int rx, int ry, int rz)
+void mul(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
-    registers[rx] = registers[ry] - registers[rz];
+    registers[rx] = registers[ry] * registers[rz];
 }
 
-void mod(int registers[], int rx, int ry, int rz)
+void mod(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
-    int aux = ry % rz;
-    registers[rx] = (aux < 0) ? (aux) + rz : (aux);
+    int aux = registers[ry] % registers[rz];
+    registers[rx] = (aux < 0) ? (aux) + registers[rz] : (aux);
 }

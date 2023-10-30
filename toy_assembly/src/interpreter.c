@@ -1,37 +1,32 @@
 #include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
+#include "../include/print.h"
 #include "../include/interpreter.h"
 #include "../include/operators/arithmetic_operators.h"
 #include "../include/operators/assignment_operators.h"
 #include "../include/operators/logical_operators.h"
 #include "../include/operators/memory_operators.h"
-#include "../include/write.h"
 
-enum functions {
-    EXIT,
-    JMP,
-    MOV,
-    PRINT,
-    ADD,
-    SUB,
-    DIV,
-    MUL,
-    MOD,
-    BEQ,
-    BLT,
-    LOAD,
-    STORE
+functionDict functionTable[] = {
+    {"MOV", mov},
+    {"ADD", add},
+    {"SUB", sub},
+    {"DIV", my_div},
+    {"MUL", mul},
+    {"MOD", mod},
+    {"JMP", jmp},
+    {"BEQ", beq},
+    {"BLT", blt},
+    {"LOAD", load},
+    {"STORE", store},
+    {"PRINT", print}
 };
 
-const char *function_names[] = {
-    "EXIT", "JMP", "MOV", "PRINT", "ADD",  "SUB",   "DIV",
-    "MUL",  "MOD", "BEQ", "BLT",   "LOAD", "STORE",
-};
+int register_count;
 
-int register_count, sign;
-
-// criando array de registrados e de memória e inizializando todos eles
+// criando array de registrados e de memória e inizializando todos eles como 0
 int registers[NUM_REGISTERS] = {0}, memory[NUM_MEMORY] = {0};
 
 void interpret(char instructions[][MAX_CHAR], int rows)
@@ -40,185 +35,120 @@ void interpret(char instructions[][MAX_CHAR], int rows)
     int instruction_address = 0;
     for (int i = 0; i < MAX_INTERATIONS && instruction_address < rows; i++)
     {
-        char main_instruction[MAX_CHAR];
-        int pos = 0;
+        char command[MAX_CHAR];
+        int position = 0;
 
-        // obtendo função principal
-        getMainInstruction(main_instruction, instructions[instruction_address], &pos);
+        // obtendo comando
+        getCommand(command, instructions[instruction_address], &position);
 
         // reiniciando contagem de registradores
         register_count = 0;
 
-        // definindo sinal do inteiro
-        sign = 1;
-
-        // executando função principal e indo para próxima instrução
-        int run = definePath(main_instruction, instructions[instruction_address], pos, &instruction_address);
-        if (!run)
-        {
-            // caso a instrução seja EXIT saimos do loop
-            break;
-        }
-        else if (run == 1)
-        {
-            instruction_address++;
-        }
+        executeCommand(command, instructions[instruction_address], position, &instruction_address);
     }
 }
 
 // definindo função a ser executada
-int definePath(char instruction[], char cur_instruction[], int pos, int *instruction_address)
+void executeCommand(char command[], char current_instruction[], int position, int *instruction_address)
 {
-    if (strcmp(instruction, "EXIT") == 0)
+    // parando execução do programa
+    if (strcmp(command, "EXIT") == 0)
     {
-        return 0;
+        exit(0);
     }
 
-    // array de registrados
-    int registers_indexes[] = {0, 0, 0};
-    
-    // pegando os indíces de cada registrador
-    getRegistersIndex(cur_instruction, pos, registers_indexes);
+    // array do index dos registrados e valor inteiro
+    int registers_index[] = {0, 0, 0};
+    int integer;
+
+    // pegando os indíces de cada registrador e o valor inteiro caso haja
+    getRegistersIndex(current_instruction, registers_index, position, &integer);
+    int rx = registers_index[0], ry = registers_index[1], rz = registers_index[2];
+
+    // variável que armazena o resultado de operações lógicas
+    int is_true = 0;
 
     // avaliando função a ser executada
-    int function_idx;
-    for (function_idx = 0; function_idx < NUM_FUNCTIONS; function_idx++)
+    for (int i = 0; i < NUM_FUNCTIONS; i++)
     {
-        if (strcmp(instruction, function_names[function_idx]) == 0)
+        if (strcmp(command, functionTable[i].name) == 0)
         {
+            functionTable[i].function(registers, memory, rx, ry, rz, integer, &is_true, register_count);
             break;
         }
     }
 
-    // realizando função correspondente
-    switch (function_idx) 
+    // atualizando endereço da instrução
+    if (is_true)
     {
-        case JMP:
-            *instruction_address = registers_indexes[0];
-            return 2;
-        
-        case MOV:
-            (register_count == 2)
-            ? mov(registers, registers_indexes[0], registers_indexes[1])
-            : movInt(registers, registers_indexes[0], registers_indexes[1] * sign);
-            break;
-
-        case PRINT:
-            write(registers, registers_indexes[0]);
-            break;
-
-        case ADD:
-            add(registers, registers_indexes[0], registers_indexes[1], registers_indexes[2]);
-            break;
-            
-        case SUB:
-            sub(registers, registers_indexes[0], registers_indexes[1], registers_indexes[2]);
-            break;
-            
-        case DIV:
-            div(registers, registers_indexes[0], registers_indexes[1], registers_indexes[2]);
-            break;
-            
-        case MUL:
-            mul(registers, registers_indexes[0], registers_indexes[1], registers_indexes[2]);
-            break;
-        
-        case MOD:
-            mod(registers, registers_indexes[0], registers_indexes[1], registers_indexes[2]);
-            break;    
-
-        case BEQ:
-            // endereço da instrução atualizado se a comparação for verdadeira
-            if (beq(registers, registers_indexes[0], registers_indexes[1]))
-            {
-                *instruction_address = registers_indexes[2];
-                return 2;
-            }
-            break;
-            
-        case BLT:
-            // endereço da instrução atualizado se a comparação for verdadeira
-            if (blt(registers, registers_indexes[0], registers_indexes[1]))
-            {
-                *instruction_address = registers_indexes[2];
-                return 2;
-            }
-            break;
-
-        case LOAD:
-            load(registers, memory, registers_indexes[0], registers_indexes[1]);
-            break;
-
-        case STORE:
-            store(registers, memory, registers_indexes[0], registers_indexes[1]);
-            break;
+        (*instruction_address) = integer;
     }
-
-    // retorna-se um para ir à próxima instrução
-    return 1;
+    else
+    {
+        (*instruction_address)++;
+    }
 }
 
 // obtendo os indíces de cada registrador informados na instrução
-void getRegistersIndex(char instruction[], int pos, int idx[])
+void getRegistersIndex(char current_instruction[], int registers_index[], int position, int *integer)
 {
-    int num_registers = 3;
-    for (int i = 0; i < num_registers; i++)
+    int i = 0;
+    while (current_instruction[position] != '\0')
     {
         // pulando caracteres que não são números
-        skipCharactes(instruction, &pos);
+        skipCharactes(current_instruction, &position);
 
-        // transformando string para int
-        idx[i] = stoi(instruction, &pos);
-
-        // saindo da função se a string não tiver mais caracters
-        if (instruction[pos] == '\0')
+        if (current_instruction[position - 1] == REGISTER)
         {
-            return;
+            // guardando índice do registrador
+            registers_index[i] = stoi(current_instruction, &position);
+            i++;
+        }
+        else
+        {
+            // guardando inteiro
+            (*integer) = stoi(current_instruction, &position);
         }
     }
 }
 
 // pulando carácteres irrelevantes e contando número de registradores
-void skipCharactes(char instruction[], int *pos)
+void skipCharactes(char current_instruction[], int *position)
 {
-    while (!isdigit(instruction[*pos]))
+    while (!isdigit(current_instruction[*position]))
     {
-        if (instruction[*pos] == REGISTER)
+        if (current_instruction[*position] == REGISTER)
         {
             register_count++;
         }
-        else if (instruction[*pos] == '-')
-        {
-            sign = -1;
-        }
-        (*pos)++;
+        (*position)++;
     }
 }
 
-// transformando número do registrador de string para inteiro
-int stoi(char instruction[], int *pos)
+// transformando número de string para inteiro
+int stoi(char current_instruction[], int *position)
 {
-    int n = 0;
-    while (isdigit(instruction[*pos]))
+    int n = 0, sign = (current_instruction[*position - 1] == '-') ? -1 : 1;
+    while (isdigit(current_instruction[*position]))
     {
         n *= 10;
-        n += instruction[*pos] - '0';
-        (*pos)++;
+        n += current_instruction[*position] - '0';
+        (*position)++;
     }
 
-    return n;
+    return sign == 1 ? n : -n;
 }
 
-// obtendo a instrução principal
-void getMainInstruction(char main_instruction[], char cur_instruction[], int *pos)
+// obtendo o comando da instrução atual
+void getCommand(char command[], char current_instruction[], int *position)
 {
     // começando do primeiro carácter da string até encontrar um espaço
-    // ou chegar em seu fim  
-    while (cur_instruction[*pos] != ' ' && cur_instruction[*pos] != '\0')
+    // ou chegar em seu fim
+    while (current_instruction[*position] != ' ' && current_instruction[*position] != '\0')
     {
-        main_instruction[*pos] = cur_instruction[*pos];
-        (*pos)++;
+        command[*position] = current_instruction[*position];
+        (*position)++;
     }
 
-    main_instruction[*pos] = '\0';
+    command[*position] = '\0';
 }

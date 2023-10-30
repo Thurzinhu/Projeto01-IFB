@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall
 
-IDIR = ../campeonato_brasileiro/include
-ODIR = ../campeonato_brasileiro/src
+IDIR = ./include
+ODIR = ./src
 OBJDIR = objects
 BINDIR = bin
 TESTDIR = tests

@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall
 
-IDIR = ../tic_tac_toe/include
-ODIR = ../tic_tac_toe/src
+IDIR = ./include
+ODIR = ./src
 OBJDIR = objects
 BINDIR = bin
 TESTDIR = tests

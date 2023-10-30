@@ -1,8 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -I$(IDIR) -g
 
-IDIR = ../toy_assembly/include
-ODIR = ../toy_assembly/src
+IDIR = ./include
+ODIR = ./src
 OBJDIR = objects
 BINDIR = bin
 OPRDIR = operators
@@ -23,11 +23,11 @@ bin/main: $(OBJ)
 
 binfolder:
 	@ echo "Creating bin directory..."
-	mkdir -p $(BINDIR)
+	mkdir $(BINDIR)
 
 objfolder:
 	@ echo "Creating obj directory..."
-	mkdir -p $(OBJDIR)
+	mkdir $(OBJDIR)
 
 $(OBJDIR)/main.o: $(ODIR)/main.c 
 	$(CC) $(CFLAGS) -c $< -o $@

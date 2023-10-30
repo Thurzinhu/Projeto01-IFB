@@ -1,14 +1,17 @@
 #include <stdio.h>
 #include "../include/operators/logical_operators.h"
 
-// retorna true se valor de rx == ry
-int beq(int registers[], int rx, int ry)
+void beq(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
-    return registers[rx] == registers[ry];
+    (*is_true) = (registers[rx] == registers[ry]);
 }
 
-// retorna true se valor de rx > ry
-int blt(int registers[], int rx, int ry)
+void blt(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
 {
-    return registers[rx] < registers[ry];
+    (*is_true) = (registers[rx] < registers[ry]);
+}
+
+void jmp(int registers[], int memory[], int rx, int ry, int rz, int integer, int *is_true, int register_count)
+{
+    (*is_true) = 1;
 }
