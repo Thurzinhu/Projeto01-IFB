@@ -25,7 +25,7 @@ int validate(int argc, char *argv[], FILE **inptr, time **times)
     if (*times == NULL)
     {
         printf("Error\n");
-        return 1;
+        return 0;
     }
     return 1;
 }
