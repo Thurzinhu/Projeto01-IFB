@@ -19,10 +19,8 @@ void generate_report(FILE *report, user *users, password *passwords, int users_c
                 fprintf(report, "%s\n", passwords[j].weak_password);
                 fprintf(report, "%s\n", users[i].name);
                 fprintf(report, "%s\n", users[i].birth_date);
-                fprintf(report, "---");
-                
-                if (i + 1 != users_count)
-                    fprintf(report, "\n");
+                fprintf(report, "---\n");
+                break;
             }
         }
     }
