@@ -37,46 +37,71 @@ Nome do arquivo que conterá dados dos usuários com senhas quebradas:
 
 ### Arquivo de Usuários
 ~~~
-Daniel Saad
-01/01/1850
-danielsaad
-981a16abd878e773ba98c10fd55db367a05f807f2eb5b5c3f2b86efbb218e2e3
-03/11/2023
+Virginia
+1/7/2022
+ronaldrodriguez
+b6f8d434a847fb0f0c1a8d9b936b8ca952e224f205a55f4ba9b2c20f88fdc9e7
+21/6/2011
 ---
-Marcus Vinicius
-02/02/1950
-marquinhos
-65e84be33532fb784c48129675f9eff3a682b27168c0ea744b2cf58ee02337c5
-20/10/2023
+Kimberly
+2/2/2007
+josephwhite
+04e77bf8f95cb3e1a36a59d1e93857c411930db646b46c218a0352e432023cf2
+12/10/2012
 ---
-Cleidison Santos
-24/12/2000
-cleidison
-d58d736c7a967fb5f307951932734f8b0594725faa5011dbb66a8c538e635fb6
-10/5/2021
----      
+Michelle
+16/7/2017
+jonathanthomas
+fcc3a23fc7232cc89c7cb0f23d8774fefb73d7dc2ab22e6a1b6b8b202b4dcc91
+4/3/2000
+---
+Matthew
+14/5/2019
+susanthompson
+a92f6bdb75789bccc118adfcf704029aa58063c604bab4fcdd9cd126ef9b69af
+7/12/2005
+---
+Michael
+28/3/2019
+thomaslopez
+408c7c5887a0f3905767754f424989b0089c14ac502d7f851d11b31ea2d1baa6
+24/8/2012
+---  
 ~~~
 
 ### Arquivo de senhas
 ~~~
-swordfish
-flamengo
-letmein
-irobot
-qwerty
+martin
+sv48A
+princess
+CLvTyd77
+mustang
+7J25eFU3
+canada
+1BBOzmQRHJQ
 ~~~
 
 ### Output
 ~~~
-marquinhos
-qwerty
-Marcus Vinicius
-02/02/1950
+ronaldrodriguez
+martin
+Virginia
+1/7/2022
 ---
-cleidison
-flamengo
-Cleidison Soares
-24/12/2000
+josephwhite
+princess
+Kimberly
+2/2/2007
+---
+susanthompson
+mustang
+Matthew
+14/5/2019
+---
+thomaslopez
+canada
+Michael
+28/3/2019
 ---
 ~~~
 

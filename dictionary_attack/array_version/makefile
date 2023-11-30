@@ -7,6 +7,7 @@ ODIR = ./src
 OBJDIR = objects
 BINDIR = bin
 INPUTDIR = ./input
+TESTPATH = /home/arthur/Projetos-IFB-2023/test_project_03/input
 
 SRC = $(wildcard $(ODIR)/*.c)
 OBJ = $(patsubst $(ODIR)/%.c, $(OBJDIR)/%.o, $(SRC))
@@ -31,7 +32,7 @@ $(OBJDIR)/main.o: $(ODIR)/main.c
 .PHONY: clean run
 
 clean:
-	rm -rf $(OBJDIR) $(BINDIR)
+	rm -rf $(OBJDIR) $(BINDIR) report.txt
 
 run:
-	$(BINDIR)/main $(INPUTDIR)/users.txt $(INPUTDIR)/passwords.txt report.txt
+	$(BINDIR)/main $(INPUTDIR)/users.txt $(INPUTDIR)/passwords.txt ./report.txt

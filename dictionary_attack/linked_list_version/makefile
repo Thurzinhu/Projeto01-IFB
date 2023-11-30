@@ -31,7 +31,7 @@ $(OBJDIR)/main.o: $(ODIR)/main.c
 .PHONY: clean run
 
 clean:
-	rm -rf $(OBJDIR) $(BINDIR)
+	rm -rf $(OBJDIR) $(BINDIR) report.txt
 
 run:
 	$(BINDIR)/main $(INPUTDIR)/users.txt $(INPUTDIR)/passwords.txt report.txt
